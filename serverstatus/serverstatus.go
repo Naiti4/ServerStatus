@@ -68,9 +68,9 @@ func scanServers() {
 			}
 
 			if serverUp && serverUp != prevServerUp {
-				sendMessageToRooms(green, server.Name, "Is now online :smiley:", true)
+				sendMessageToRooms(green, server.Name, "(SERVER) Estado del servidor: Running", true)
 			} else if !serverUp && serverUp != prevServerUp {
-				sendMessageToRooms(red, server.Name, "Has gone offline :frowning2:", true)
+				sendMessageToRooms(red, server.Name, "(SERVER) Estado del servidor: Stopped", true)
 			}
 
 			config.Config.Servers[index].Online = serverUp
